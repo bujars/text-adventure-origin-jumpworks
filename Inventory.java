@@ -12,11 +12,24 @@ public interface Inventory{
      */
     public void addItem(Item i);
 
+
     /**
-     * Uses an item named in the parameter, provided it exists in the inventory
+     * Determines whether or not an {@link Item} with the itemName is in the
+     * inventory
      *
-     * @param itemName the name of the item to be used
-     * @return true if the item named was available to be used, false otherwise
+     * @param itemName the name of the item
+     * @return true if an item with itemName is in the inventory, false
+     *         otherwise
      */
-    public boolean useItem(String itemName);
+    public boolean hasItem(String itemName);
+
+    /**
+     * Gets an {@link Item} with itemName from the inventory, provided it
+     * exists in the inventory.
+     *
+     * @param itemName the name of the item
+     * @return an {@link Item} that has the corresponding itemName, null if
+     *         no such {@link Item} exists
+     */
+    public Item getItem(String itemName);
 }
