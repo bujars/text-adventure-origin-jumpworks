@@ -54,7 +54,8 @@ public class SimpleEngine implements Engine{
     public String toString(){
 	String engineInfo;
 	engineInfo =
-	    "Player:{ " + player.toString() + " };\n" +
+            "*SimpleEngine Information*\n" + 
+	    "Player:{ " + player.toString() + " };\n" + 
 	    "Next Location:{ " + nextLocationName + " };\n";
 	engineInfo += "All Locations:{ "; 
         for(Location loc : locations){
