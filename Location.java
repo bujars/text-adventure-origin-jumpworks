@@ -20,6 +20,7 @@ public interface Location{
      *
      * @param p the {@link Player} entering the location
      * @return the name of the next location
+     * @throws InterruptedException if the game is paused and gets interrupted
      */
-    public String enter(Player p);
+    public String enter(Player p) throws InterruptedException;
 }

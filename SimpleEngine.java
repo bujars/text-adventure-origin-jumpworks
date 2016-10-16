@@ -24,7 +24,7 @@ public class SimpleEngine implements Engine{
     }
 
     @Override
-    public void start(){
+    public void start() throws InterruptedException{
 	nextLocationName = locations.get(0).enter(player);
     }
 
@@ -39,7 +39,8 @@ public class SimpleEngine implements Engine{
     }
 
     @Override
-    public void goToNextState() throws IllegalStateException{
+	public void goToNextState() throws InterruptedException, 
+					   IllegalStateException{
 	for(Location loc : locations){
 	    if(loc.getName().equals(nextLocationName)){
 		nextLocationName = loc.enter(player);
