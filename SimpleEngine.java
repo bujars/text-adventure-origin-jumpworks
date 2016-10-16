@@ -39,7 +39,7 @@ public class SimpleEngine implements Engine{
     }
 
     @Override
-    public void goToNextState(){
+    public void goToNextState() throws IllegalStateException{
 	for(Location loc : locations){
 	    if(loc.getName().equals(nextLocationName)){
 		nextLocationName = loc.enter(player);
