@@ -6,6 +6,6 @@ public class LocationThree implements Location
     }
     public String enter(Player p) throws InterruptedException
     {
-	return "LocationThreeNext";
+	return "LocationFour";
     }
 }
