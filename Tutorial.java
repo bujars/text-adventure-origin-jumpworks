@@ -32,8 +32,13 @@ public class Tutorial implements Location{
 	return "Village";
     }
 
-    /*
-     * Asks the user a yes or no question and returns true if the user says yes and vice versa
+    /**
+     * Asks the player a question
+     *
+     * @param question the question that will be asked
+     * @param wait the amount of time to wait between the question and the input options
+     * @return true if player says yes, false if player says no
+     * @throws InterruptedException if the game is paused and gets interrupted
      */
     public boolean askYesOrNo(String question, int wait) throws InterruptedException{
 	Scanner sc = new Scanner(System.in);
