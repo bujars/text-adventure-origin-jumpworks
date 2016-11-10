@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
-public class Tutorial implements Location{
+public class Tutorial extends AdvancedLocation{
     public String getName(){
 	return "Tutorial";
     }
-
+    
     public String enter(Player p) throws InterruptedException{
 	Scanner sc = new Scanner(System.in);
 	String input = "";
@@ -36,53 +36,6 @@ public class Tutorial implements Location{
 	    betterPrint("Princess Bubblegum: Well you're going to have to anyways.");
 	}
 	return "Village";
-    }
-
-    /**
-     * Asks the player a question
-     *
-     * @param question the question that will be asked
-     * @param wait the amount of time to wait between the question and the input options
-     * @return true if player says yes, false if player says no
-     * @throws InterruptedException if the game is paused and gets interrupted
-     */
-    public boolean askYesOrNo(String question) throws InterruptedException{
-	Scanner sc = new Scanner(System.in);
-	String input = "";
-	betterPrint(question);
-	//System.out.print("**\n**[y] TO SAY YES\n"+
-	//		 "**[n] TO SAY NO\n**\n> ");
-	betterPrint("**\n**[y] TO SAY YES\n"+
-			 "**[n] TO SAY NO\n**\n> ");
-	while (input == ""){
-	    input = sc.next();//gets user input
-	    if (!(input.equals("y")||input.equals("n"))){
-		input = "";
-		System.out.println("That isn't an option try again");
-	    }
-        }
-	return input.equals("y");
-    }
-
-    public void nextLine() throws InterruptedException{
-	Scanner sc = new Scanner(System.in);
-	betterPrint("**\n**[ENTER] TO CONTINUE\n**\n>");
-	sc.nextLine();
-    }
-
-    public void betterPrint(String s) throws InterruptedException{
-	String c = "";//c for char
-	for (int i = 0; i < s.length();i++){
-	    c = s.substring(i, i + 1);
-	    if ((i < s.length() - 1) && (c.equals("\\")) && s.substring(i + 1, i + 2) == "n"){
-	        System.out.println();
-		i++;
-	    } else {
-		Thread.sleep(25);
-		System.out.print(s.substring(i, i + 1));
-	    }
-	}
-	System.out.println("");
     }
     
     public static void main(String[] args){
