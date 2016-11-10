@@ -185,4 +185,14 @@ public class City implements Location
 	}
 	System.out.println("");
     }
+
+    public static void main(String[] args){
+	City c = new City();
+	try {
+	    c.enter(new Teacher());
+	    System.out.println("City class");
+	} catch (InterruptedException e){
+	    System.out.println("Something Broke");
+	}
+    }
 }
