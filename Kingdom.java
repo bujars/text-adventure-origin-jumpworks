@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Kingdom extends 
+public class Kingdom extends AdvancedLocation
 {
     public String getName()
     {
@@ -10,7 +10,22 @@ public class Kingdom extends
     public String enter(Player p) throws InterruptedException
     {
     	Scanner sc = new Scanner(System.in);
-	System.out.println("You have leveled up to Kingdom");
+	String input = "";
+	String question = "";
+	
+	betterPrint("You have leveled up to Kingdom");
+	nextLine();
+	betterPrint();
+	nextLine();
+	betterPrint();
+	nextLine();
+	betterPrint();
+	nextLine();
+	betterPrint();
+	nextLine();
+	betterPrint();
+	nextLine();
+	System.out.println();
 	Thread.sleep(1000);
 	System.out.println("You're Kingdom has reached the top");
 	Thread.sleep(1000);
