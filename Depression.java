@@ -14,7 +14,7 @@ public class Depression extends AdvancedLocation
 	String question = "";
 	String input = "";
 	
-	/*System.out.println("Your Kingdom has failed. You are in a state of Depression.");
+	/*System.out.println("**Your Kingdom has failed. You are in a state of Depression.**");
 	Thread.sleep(1000);
 	System.out.println("You're state depression of has reached the top");
 	Thread.sleep(1000);
@@ -37,11 +37,11 @@ public class Depression extends AdvancedLocation
 	betterPrint("Princess Bubblegum: My King! What did you do to us!");
 	betterPrint("Princess Bubblegum: No one believes in your power anymore! You have destroyed much of us!");
 	nextLine();
-	betterPrint("Princess Bubblegum: Your Highness, Cake has you to see you.");
+	betterPrint("Princess Bubblegum: Your Highness, Cake has come to see you.");
 	betterPrint("Princess Bubblegum: I will let Cake in at once!");
 	nextLine();
-	betterPrint("Cake: My King to be the great kingdom of OU, we need security."); 
-	question = "Cake: Please protect the citzens of OU by giving me 100 gold to bulid a wall.";
+	betterPrint("Cake: My King, to be the great kingdom of OU, we need security."); 
+	question = "Cake: Please protect the citzens of OU by giving me 1000 gold so I can bulid a wall.";
 	
 	if(decideYesOrNo(question))
 	{
@@ -51,8 +51,8 @@ public class Depression extends AdvancedLocation
 		System.out.print("\n**\n**[enter] TO CONTINUE \n**\n>");
 		sc.nextLine();
 		Thread.sleep(1000);*/
-		betterPrint("-100 Gold, +1000 Happiness.");
-		nextLine("**The Great Wall of OU was Built!");
+		betterPrint("-1000 Gold, +1000 Happiness.");
+		nextLine("**The Great Wall of OU was Built!**");
 		betterPrint("Cake: Oh My King! Thank You for Everything! Our City will hopefully be saved.");
 		nextLine();
 	}
