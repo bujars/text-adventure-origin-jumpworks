@@ -13,6 +13,7 @@ public class AdventureForSoftwareEngineering implements Game{
     public List<Location> getLocations(){
 	List<Location> levels = new ArrayList<Location>();
 	levels.add(new City());
+	levels.add(new PoorLevel());
 	return levels;
     }
 

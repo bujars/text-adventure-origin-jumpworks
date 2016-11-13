@@ -146,10 +146,10 @@ public class City implements Location
 	    }
 
 
-	return "Kingdom";
+	return "PoorLevel";
     }
 
-    private boolean  decideYesOrNo(String question) throws InterruptedException{
+    public boolean  decideYesOrNo(String question) throws InterruptedException{
 	Scanner sc = new Scanner(System.in);
 	String input = "";
 	betterPrint(question);
@@ -164,13 +164,13 @@ public class City implements Location
          return input.equals("y");
     }
 
-    private void nextLine() throws InterruptedException {
+    public void nextLine() throws InterruptedException {
 	Scanner sc = new Scanner(System.in);
 	betterPrint("**\n**[ENTER] TO CONTINUE\n**\n> ");
 	sc.nextLine();
     }
 
-    private void betterPrint(String s) throws InterruptedException {
+    public void betterPrint(String s) throws InterruptedException {
 	String c = "";
 	for(int i = 0; i < s.length(); i++){
 	    c = s.substring(i, i + 1);
