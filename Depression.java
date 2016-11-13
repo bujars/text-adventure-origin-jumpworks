@@ -11,7 +11,7 @@ public class Depression extends AdvancedLocation
     {
 
     	Scanner sc = new Scanner(System.in);
-	String question;
+	String question = "";
 	
 	/*System.out.println("Your Kingdom has failed. You are in a state of Depression.");
 	Thread.sleep(1000);
@@ -34,13 +34,13 @@ public class Depression extends AdvancedLocation
 	betterPrint("**Lost 1000 Health, 1000 Money, and 1000 Population!");
 	nextLine();
 	betterPrint("Princess Bubblegum: My King! What did you do to us!");
-	betterPrint("Princess Bubblegum: No one believes in your power anymore! You have destroyed much of us!")
+	betterPrint("Princess Bubblegum: No one believes in your power anymore! You have destroyed much of us!");
 	nextLine();
 	betterPrint("Princess Bubblegum: Your Highness, Cake has you to see you.");
 	betterPrint("Princess Bubblegum: I will let Cake in at once!");
 	nextLine();
 	betterPrint("Cake: My King to be the great kingdom of OU, we need security."); 
-	question = "Cake: Please protect the citzens of OU by giving me 100 gold to bulid a wall.");
+	question = "Cake: Please protect the citzens of OU by giving me 100 gold to bulid a wall.";
 	
 	if(decideYesOrNo(question))
 	{
@@ -78,41 +78,24 @@ public class Depression extends AdvancedLocation
     }
 
     /*public boolean askYesOrNo(String question, int wait) throws InterruptedException
-
     {
-
        Scanner sc = new Scanner(System.in);
-
        String input = "";
-
        System.out.println(question);
-
        Thread.sleep(wait);
-
        System.out.print("**\n**[y] TO SAY YES\n"+
-
                             "**[n] TO SAY NO\n**\n> ");
-
        while (input == "")
-
        {
-
            input = sc.next();//gets user input                                                                                                                                   
-
            if (!(input.equals("y")||input.equals("n"))){
-
                input = "";
-
                System.out.println("That isn't an option try again");
-
            }
-
        }
-
-       return input.equals("y");
-	    
+       return input.equals("y");    
    }*/
-}
+
 
  public static void main(String[] args){
 	Depression d = new Depression();
@@ -123,3 +106,4 @@ public class Depression extends AdvancedLocation
 	    System.out.println("Something Broke");
 	}
     }
+}
