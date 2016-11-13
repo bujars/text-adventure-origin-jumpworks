@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Village extends AdvancedLocation{
     public String getName(){
-	return "Tutorial";
+	return "Village";
     }
 
     public String enter(Player p) throws InterruptedException{
@@ -18,7 +18,7 @@ public class Village extends AdvancedLocation{
 	    betterPrint("\n**\n**Gained 50 happiness\n**\n>");
 	}
 	
-	return "Village";
+	return "City";
     }
     
     public static void main(String[] args){
