@@ -43,7 +43,7 @@ public class Depression extends AdvancedLocation
 	betterPrint("Cake: My King, to be the great kingdom of OU, we need security."); 
 	question = "Cake: Please protect the citzens of OU by giving me 1000 gold so I can bulid a wall.";
 	
-	if(decideYesOrNo(question))
+	if(askYesOrNo(question))
 	{
 		/*System.out.println("You have provided 100 gold \n+10 Happiness -100 Money");
 		Thread.sleep(1000);
@@ -52,7 +52,8 @@ public class Depression extends AdvancedLocation
 		sc.nextLine();
 		Thread.sleep(1000);*/
 		betterPrint("-1000 Gold, +1000 Happiness.");
-		nextLine("**The Great Wall of OU was Built!**");
+		nextLine();
+		betterPrint("**The Great Wall of OU was Built!**");
 		betterPrint("Cake: Oh My King! Thank You for Everything! Our City will hopefully be saved.");
 		nextLine();
 	}
