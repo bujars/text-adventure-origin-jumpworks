@@ -194,5 +194,5 @@ public class City implements Location
 	} catch (InterruptedException e){
 	    System.out.println("Something Broke");
 	}
-    } 
+    }
 }
