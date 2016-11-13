@@ -1,4 +1,4 @@
-"public class Kingdom implements Location
+public class Depression implements Location
 
 {
   public String getName()
@@ -11,11 +11,11 @@
 
     	Scanner sc = new Scanner(System.in);
 
-	System.out.println("You have leveled up to Kingdom");
+	System.out.println("Your Kingdom has failed. You are in a state of Depression.");
 
 	Thread.sleep(1000);
 
-	System.out.println("You're Kingdom has reached the top");
+	System.out.println("You're state depression of has reached the top");
 
 	Thread.sleep(1000);
 
