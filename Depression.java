@@ -1,19 +1,12 @@
-public class Kingdom implements Location
+"public class Kingdom implements Location
 
 {
-
-    public String getName()
-
+  public String getName()
     {
-
 	return "Location:";
-
     }
 
-
-
     public String enter(Player p) throws InterruptedException
-
     {
 
     	Scanner sc = new Scanner(System.in);
@@ -26,25 +19,25 @@ public class Kingdom implements Location
 
 	Thread.sleep(1000);
 
-	System.out.println();
+	System.out.println("Gained 100 Health, 100 Money, and 100 population growth");
 
 	Thread.sleep(1000);
 
-	System.out.println();
+	System.out.println(\n**\n**[enter] TO CONTINUE \n**\n>);
 
 	Thread.sleep(1000);
 
-	System.out.println();
+	System.out.println("Back to business.");
 
 	Thread.sleep(1000);
 
 	Thread.sleep(1000);
 
-	System.out.println();
+	System.out.println("Your Highness, Cake has you to see you.");
 
 	Thread.sleep(1000);
 
-	System.out.println();
+	System.out.println("Cake: My King to be the great kingdom of OU, we need security. \n Please protect the citzens of OU by giving me 100 gold to bulid a wall.");
 
 	
 
@@ -52,13 +45,13 @@ public class Kingdom implements Location
 
 	{
 
-		System.out.println();
+		System.out.println("You have provided 100 gold \n+10 Happiness -100 Money");
 
 		Thread.sleep(1000);
 
-		System.out.println();
+		System.out.println("Thank you my King, Ou is forever in your debt.");
 
-		System.out.print();
+		System.out.print("\n**\n**[enter] TO CONTINUE \n**\n>");
 
 		sc.nextLine();
 
@@ -70,15 +63,15 @@ public class Kingdom implements Location
 
 	{
 
-		System.out.println();
+		System.out.println("You Lost 100 Happiness");
 
 		Thread.sleep(1000);
 
-		System.out.println();
+		System.out.println("You're very niave my King, my best wishes to Ou");
 
 		Thread.sleep(1000);
 
-		System.out.print();
+		System.out.print("\n**\n**[enter] TO CONTINUE \n**\n>");
 
 		sc.nextLine();
 
