@@ -12,6 +12,7 @@ public class Depression extends AdvancedLocation
 
     	Scanner sc = new Scanner(System.in);
 	String question = "";
+	String input = "";
 	
 	/*System.out.println("Your Kingdom has failed. You are in a state of Depression.");
 	Thread.sleep(1000);
