@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Kingdom implements Location
 {
     public String getName()
