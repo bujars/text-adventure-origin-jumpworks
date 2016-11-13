@@ -31,12 +31,4 @@ public class PoorLevel extends City
 	betterPrint("");
 	return "Game Over";
     }
-    /* private void nextLine() throws InterruptedException {
-	Scanner sc = new Scanner(System.in);
-	betterPrint("**\n**[ENTER] TO CONTINUE\n**\n> ");
-	sc.nextLine();
-    }
-    
-    private */
-
 }
