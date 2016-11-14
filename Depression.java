@@ -37,12 +37,12 @@ public class Depression extends AdvancedLocation
 	betterPrint("Princess Bubblegum: My King! What did you do to us!");
 	betterPrint("Princess Bubblegum: No one believes in your power anymore! You have destroyed much of us!");
 	nextLine();
-	betterPrint("-Door Knocks-")
+	betterPrint("-Door Knocks-");
 	betterPrint("Princess Bubblegum: Your Highness, Cake has come to see you.");
 	betterPrint("Princess Bubblegum: I will let Cake in at once!");
 	nextLine();
 	betterPrint("Cake: My King, to be the great kingdom of OU, we need security.");
-	betterPrint("Cake: My idea is to build a wall that will provide jobs and keep the city protected!")
+	betterPrint("Cake: My idea is to build a wall that will provide jobs and keep the city protected!");
 	question = "Cake: Please protect the citzens of OU by giving me 1000 gold so I can bulid a wall.";
 	
 	if(askYesOrNo(question))
@@ -79,10 +79,10 @@ public class Depression extends AdvancedLocation
 	betterPrint("Princess Bubblegum: Every decision you have made has led to our downfall.");
 	betterPrint("Princess Bubblegum: Please my king, from now on, think of the people!");
 	nextLine();
-	betterPrint("Princess Bubblegum: My King! At last! I think our savor has come!);
+	betterPrint("Princess Bubblegum: My King! At last! I think our savor has come!");
 	betterPrint("Princess Bubblegum: King Zues is here! His magic can work wonders! I'll let him in!!!");
 	nextLine();
-	betterPrint("King Zues: So, you need help! Of course!);
+	betterPrint("King Zues: So, you need help! Of course!");
 	betterPrint("King Zues: In order for you to get my help, I need all your riches, and objects.");
 	betterPrint("King Zues: I will perform a spell that will multiply everything and make your city prosper");
 	question = "So, do we have a deal?";
