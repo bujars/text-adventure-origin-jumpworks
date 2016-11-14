@@ -89,13 +89,13 @@ public class Depression extends AdvancedLocation
 	
 	if(askYesOrNo(question))
 	{
-		betterPrint("-All Gold. -All Objects. -All Population (Except you and Princess Bubblegum)");
+		betterPrint("Lost All Gold. Lost All Objects. Lost All Population (Except you and Princess Bubblegum)");
 		nextLine();
 		betterPrint("King Zues: Ha! I lied and destroyed your kingdom!");
 		betterPrint("Muhahahahha......Game Over");
 	}
 	else{
-		betterPrint("-All Gold. -All Objects. -All Population (Except you and Princess Bubblegum)");
+		betterPrint("Lost All Gold. Lost All Objects. Lost All Population(Except you and Princess Bubblegum)");
 		nextLine();
 		betterPrint("King Zues: Ha! Big Mistake! I will performed a spell and destroyed your kingdom!");
 		betterPrint("Muhahahahha......Game Over");
