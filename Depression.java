@@ -43,7 +43,7 @@ public class Depression extends AdvancedLocation
 	nextLine();
 	betterPrint("Cake: My King, to be the great kingdom of OU, we need security.");
 	betterPrint("Cake: My idea is to build a wall that will provide jobs and keep the city protected!");
-	question = "Cake: Please protect the citzens of OU by giving me 1000 gold so I can bulid a wall.";
+	question = "Cake: Please protect the citzens of OU by giving me 1000 gold so I can bulid a wall?";
 	
 	if(askYesOrNo(question))
 	{
@@ -95,9 +95,11 @@ public class Depression extends AdvancedLocation
 		betterPrint("Muhahahahha......Game Over");
 	}
 	else{
+		betterPrint("**Magical Spell Performed**");
+		nextLine();
 		betterPrint("Lost All Gold. Lost All Objects. Lost All Population(Except you and Princess Bubblegum)");
 		nextLine();
-		betterPrint("King Zues: Ha! Big Mistake! I will performed a spell and destroyed your kingdom!");
+		betterPrint("King Zues: Ha! Big Mistake! I performed a spell and destroyed your kingdom!");
 		betterPrint("Muhahahahha......Game Over");
 	}
 	
