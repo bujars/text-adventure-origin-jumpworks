@@ -78,6 +78,29 @@ public class Depression extends AdvancedLocation
 	betterPrint("Princess Bubblegum: My King, what have you done?");
 	betterPrint("Princess Bubblegum: Every decision you have made has led to our downfall.");
 	betterPrint("Princess Bubblegum: Please my king, from now on, think of the people!");
+	nextLine();
+	betterPrint("Princess Bubblegum: My King! At last! I think our savor has come!);
+	betterPrint("Princess Bubblegum: King Zues is here! His magic can work wonders! I'll let him in!!!");
+	nextLine();
+	betterPrint("King Zues: So, you need help! Of course!);
+	betterPrint("King Zues: In order for you to get my help, I need all your riches, and objects.");
+	betterPrint("King Zues: I will perform a spell that will multiply everything and make your city prosper");
+	question = "So, do we have a deal?";
+	
+	if(askYesOrNo(question))
+	{
+		betterPrint("-All Gold. -All Objects. -All Population (Except you and Princess Bubblegum)");
+		nextLine();
+		betterPrint("King Zues: Ha! I lied and destroyed your kingdom!");
+		betterPrint("Muhahahahha......Game Over");
+	}
+	else{
+		betterPrint("-All Gold. -All Objects. -All Population (Except you and Princess Bubblegum)");
+		nextLine();
+		betterPrint("King Zues: Ha! Big Mistake! I will performed a spell and destroyed your kingdom!");
+		betterPrint("Muhahahahha......Game Over");
+	}
+	
 	return "Game Over";
 
 	
