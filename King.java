@@ -30,4 +30,11 @@ public class King implements Player{
     public Inventory getInventory(){
 	return null;
     }
+
+    public static void main(String[] args){
+	King k = new King();
+	System.out.println(k.getHealth());
+	k.changeHealth(-50);
+	System.out.println(k.getHealth());
+    }
 }
