@@ -20,9 +20,9 @@ public class King implements Player{
 
     @Override
 	public void changeHealth(int delta){
-	if(!(delta < 0 && delta > health))
+	if(!(delta > health))
 	{
-	    health -= delta;
+	    health += delta;
 	}
     }
 
