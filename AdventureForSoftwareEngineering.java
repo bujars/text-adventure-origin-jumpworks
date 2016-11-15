@@ -12,8 +12,11 @@ public class AdventureForSoftwareEngineering implements Game{
     @Override
     public List<Location> getLocations(){
 	List<Location> levels = new ArrayList<Location>();
+	levels.add(new Tutorial());
+	levels.add(new Village());
 	levels.add(new City());
 	levels.add(new PoorLevel());
+	levels.add(new Depression());
 	return levels;
     }
 
