@@ -14,7 +14,7 @@ public class Depression extends AdvancedLocation
 	String question = "";
 	String input = "";
 	
-	betterPrint("--Your Kingdom has failed. You Kingdom is in a state of Depression!--");
+	betterPrint("--Your Kingdom has failed. Your Kingdom is in a state of Depression!--");
 	nextLine();
 	betterPrint("Lost 1000 Health, 1000 Money, and 1000 Population!");
 	nextLine();
