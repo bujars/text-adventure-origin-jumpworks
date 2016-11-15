@@ -49,6 +49,8 @@ public class Kingdom extends AdvancedLocation
 		betterPrint("Peppermint Butler: I will eat your flesh!");
 		nextLine();
 	}
+	//This is doing the same this as above. I just commented it out so it doesn't mess up the code. 
+	/*
 	if(askYesOrNo(question))
 	{
 		
@@ -67,7 +69,7 @@ public class Kingdom extends AdvancedLocation
 		nextLine();
 		betterPrint("Peppermint Butler: I will eat your flesh!");
 		nextLine();
-	}
+	}*/
 	
 	return "Game Over";
 
