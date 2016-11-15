@@ -20,22 +20,22 @@ public class Kingdom extends AdvancedLocation
 	betterPrint("Gained 1000 Health, 1000 Money, and 1000 Population!");
 	nextLine();
 	betterPrint("Princess Bubblegum: My King! Congrats!");
-	betterPrint("Princess Bubblegum: Ou has never had more faith in you more than no!");
+	betterPrint("Princess Bubblegum: Ou has never had more faith in you more than now!");
 	nextLine();
 	betterPrint("-Door Knocks-");
 	betterPrint("Princess Bubblegum: Your Highness, Peppermint Butler has come to see you.");
 	betterPrint("Princess Bubblegum: I will let Peppermint Butler in at once!");
 	nextLine();
 	betterPrint("Peppermint Butler: My King, demons from the underworld are surfacing and coming to take over Ou!");
-	betterPrint("Peppermint Butler: But we can defeat them before they reach the kingdom");
-	question = "Peppermint Butler: Please give me an army and weapons";
+	betterPrint("Peppermint Butler: But we can defeat them before they reach the kingdom.");
+	question = "Peppermint Butler: Can you please supply me an army and weapons?";
 	
 	if(askYesOrNo(question))
 	{
 		
 		betterPrint("-1000 Gold, +1000 Happiness.");
 		nextLine();
-		betterPrint("**An army has created and equipted with top the line weapons**");
+		betterPrint("*An army has created and equipted with top the line weapons*");
 		betterPrint("Peppermint Butler: Oh My King! Thank You for Everything! The demons shall not win!");
 		nextLine();
 	}
