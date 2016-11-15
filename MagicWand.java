@@ -32,7 +32,7 @@ public class MagicWand extends Item {
 	 * @return the number of instances in this item
 	 */
 	public int getCount(){
-	    return 1;
+	    return count;
 	}
 
 
@@ -51,7 +51,12 @@ public class MagicWand extends Item {
     }
 
 
-
+    public static void main(String[] args){
+	MagicWand mv = new MagicWand();
+	System.out.println(mv.getName());
+	System.out.println(mv.getDescription());
+	System.out.println(mv.getCount());
+    }
 
 
 
