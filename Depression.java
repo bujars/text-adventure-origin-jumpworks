@@ -14,22 +14,6 @@ public class Depression extends AdvancedLocation
 	String question = "";
 	String input = "";
 	
-	/*System.out.println("**Your Kingdom has failed. You are in a state of Depression.**");
-	Thread.sleep(1000);
-	System.out.println("You're state depression of has reached the top");
-	Thread.sleep(1000);
-	System.out.println("Gained 100 Health, 100 Money, and 100 population growth");
-	Thread.sleep(1000);
-	System.out.println(\n**\n**[enter] TO CONTINUE \n**\n>);
-	Thread.sleep(1000);
-	System.out.println("Back to business.");
-	Thread.sleep(1000);
-	Thread.sleep(1000);
-	System.out.println("Your Highness, Cake has you to see you.");
-	Thread.sleep(1000);
-	System.out.println("Cake: My King to be the great kingdom of OU, we need security. \n Please protect the citzens of OU by giving me 100 gold to bulid a wall.");
-	*/
-	
 	betterPrint("--Your Kingdom has failed. You Kingdom is in a state of Depression!--");
 	nextLine();
 	betterPrint("Lost 1000 Health, 1000 Money, and 1000 Population!");
@@ -47,12 +31,7 @@ public class Depression extends AdvancedLocation
 	
 	if(askYesOrNo(question))
 	{
-		/*System.out.println("You have provided 100 gold \n+10 Happiness -100 Money");
-		Thread.sleep(1000);
-		System.out.println("Thank you my King, Ou is forever in your debt.");
-		System.out.print("\n**\n**[enter] TO CONTINUE \n**\n>");
-		sc.nextLine();
-		Thread.sleep(1000);*/
+
 		betterPrint("-1000 Gold, +1000 Happiness.");
 		nextLine();
 		betterPrint("**The Great Wall of OU was Built!**");
@@ -61,13 +40,7 @@ public class Depression extends AdvancedLocation
 	}
 	else
 	{
-		/*System.out.println("You Lost 100 Happiness");
-		Thread.sleep(1000);
-		System.out.println("You're very niave my King, my best wishes to Ou");
-		Thread.sleep(1000);
-		System.out.print("\n**\n**[enter] TO CONTINUE \n**\n>");
-		sc.nextLine();
-		Thread.sleep(1000);*/
+		
 		betterPrint("--OZ has attacked your city!--");
 		nextLine();
 		betterPrint("-1000 Gold, -1000 Happiness, -1000 Population.");
@@ -108,27 +81,6 @@ public class Depression extends AdvancedLocation
 	
 
     }
-
-    /*public boolean askYesOrNo(String question, int wait) throws InterruptedException
-    {
-       Scanner sc = new Scanner(System.in);
-       String input = "";
-       System.out.println(question);
-       Thread.sleep(wait);
-       System.out.print("**\n**[y] TO SAY YES\n"+
-                            "**[n] TO SAY NO\n**\n> ");
-       while (input == "")
-       {
-           input = sc.next();//gets user input                                                                                                                                   
-           if (!(input.equals("y")||input.equals("n"))){
-               input = "";
-               System.out.println("That isn't an option try again");
-           }
-       }
-       return input.equals("y");    
-   }*/
-
-
  public static void main(String[] args){
 	Depression d = new Depression();
 	try {
