@@ -41,7 +41,7 @@ public class Money extends Item {
 
 
 
-	return "Money is used to purchase anything desired.";
+	return "Money is used to purchase anything you desire.";
 
 
     }
