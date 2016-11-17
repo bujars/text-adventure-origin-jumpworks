@@ -7,6 +7,8 @@ public class TheKingsGame implements Game{
         levels.add(new Tutorial());
 	levels.add(new Village());
 	levels.add(new City());
+	levels.add(new Kingdom());
+	levels.add(new Depression());
 	levels.add(new PoorLevel());
 	return levels;
     }
