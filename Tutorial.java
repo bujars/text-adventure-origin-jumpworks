@@ -16,17 +16,17 @@ public class Tutorial extends AdvancedLocation{
 	nextLine();
 	//System.out.println("Princess Bubblegum: Im your personal advisor Princess Bubblegum");
 	//Thread.sleep(1000);
-	betterPrint("Princess Bubblegum: Im your personal advisor Princess Bubblegum");
+	betterPrint("Princess Bubblegum: I am your personal advisor, Princess Bubblegum.");
 	nextLine();
-	question = "Princess Bubblegum: Are you ready to make a Kingdom?";
+	question = "Princess Bubblegum: Are you ready to build up a Kingdom?";
 	if (askYesOrNo(question)){
 	    betterPrint("Princess Bubblegum: Great!");
 	} else {
-	    betterPrint("Princess Bubblegum: That doesn't sound promissing");
+	    betterPrint("Princess Bubblegum: That doesn't sound promissing.");
 	}
 	//Thread.sleep(1000);
 	nextLine();
-	betterPrint("Princess Bubblegum: Alright to rule your kingdom all you have to do is answer question. Just say yes and no.");
+	betterPrint("Princess Bubblegum: Alright to rule your kingdom all you have to do is answer questions. Just say yes and no.");
 	//Thread.sleep(1500);
 	nextLine();
 	question = "Princess Bubblegum: You got that?";
