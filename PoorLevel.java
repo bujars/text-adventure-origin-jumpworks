@@ -1,7 +1,6 @@
 import java.util.Scanner;
-// 
-
-public class PoorLevel extends City
+ 
+public class PoorLevel extends AdvancedLocation
 {
     public String getName()
     {
@@ -13,11 +12,12 @@ public class PoorLevel extends City
 	String input = "";
 	String question = "";
 	
-	betterPrint("OH NO!");
+	betterPrint("-- OH NO! --");
         nextLine();
-	betterPrint("Your Kingdon has fallen! Every decision you made was wrong and has led to our downfall.");
+	betterPrint("-- Your Kingdon has fallen! Every decision you made was wrong and has led to the Kingdom's downfall. --");
 	nextLine();
-	betterPrint("Lost 100 Health, 100 Money, 200 Population.");
+	betterPrint("** -100 Health, -100 Money, -200 Population. **");
+	p.changeHealth(-100);
 	nextLine();
 	betterPrint("Princess Bubblegum: My King! What have you done!");
 	nextLine();
@@ -25,23 +25,61 @@ public class PoorLevel extends City
 	betterPrint("Princess Bubblegum: People are crying, dying, and pleading for help!");
 	betterPrint("Princess Bubblegum: I have sent out a message to all kingdoms for help! Hopefully one will help us!");
 	nextLine();
+	
+	betterPrint("-- Five Days Later --");
+	nextLine();
+	
 	betterPrint("Princess Bubblegum: My King, My King, someone is here to visit, I'll let them in at once!");
 	nextLine();
 	betterPrint("Middleclass Man: My King, I have come to plead for help.");
 	betterPrint("Middleclass Man: A dragon is burning us to the ground! Soon we will all be dead!");
 	question = ("Middleclass Man: Can You please lend me some object to defeat it? I know you are full of magical objects!");
 
-	if(decideYesOrNo(question)){
-	    betterPrint("You have provided a magic wand.");
-	    nextLine();
-	    betterPrint("Middleclass Man: Oh my king! Soon we shall have the dragon defeated!");
+	if(askYesOrNo(question)){
+	    question = "Do you want to provide a Magic Wand?";
+	    boolean b = false;
+	    if(askYesOrNo(question))
+		{
+		    betterPrint("-- You have provided a Magic Wand! --");
+		    nextLine();
+		    b = true;
+		    betterPrint("Middleclass Man: Oh my king! Soon we shall have the dragon defeated!");
+		    betterPrint("Middleclass Man: The Kingdom will be saved!");
+		    nextLine();
+		    betterPrint("** +100 Happiness **");
+		    nextLine();
+
+		}
+	    else if(!b){
+		question = "Do you want to provide a Spell Book?";
+		if(askYesOrNo(question)){
+		    betterPrint("-- You have provided a Spell Book. --");
+		    nextLine();
+		    betterPrint("Middleclass Man: Oh my king! Soon we shall have the dragon defeated!");
+		    betterPrint("Middleclass Man: The Kingdom will be saved!");
+		    nextLine();
+		    betterPrint("** +100 Happiness **");
+		    nextLine();
+		}
+
+	    }
+	    else if(b == false){
+		
+		betterPrint("-- You lied. --");
+		betterPrint("** -100 Happiness. -100 Population **");
+		nextLine();
+		betterPrint("MiddleClass Man: You coward! I hope you burn in hell! You have ruined our kingdom!");
+		nextLine();
+	    }
+	    /*betterPrint("Middleclass Man: Oh my king! Soon we shall have the dragon defeated!");
 	    betterPrint("Middleclass Man: The Kingdom will be saved!");
 	    nextLine();
 	    betterPrint("+100 Happiness");
-	    nextLine();
+	    nextLine();*/
 	}
 	else{
-	    betterPrint("Your Kingdom has lost 100 Happiness. Population Decrease 100.");
+	    betterPrint("** -100 Happiness. -100 Population **");
+	    //betterPrint("Your Kingdom has lost 100 Happiness. Population Decrease 100.");
 	    nextLine();
 	    betterPrint("MiddleClass Man: You coward! I hope you burn in hell! You have ruined our kingdom!");
 	    nextLine();
@@ -57,21 +95,26 @@ public class PoorLevel extends City
 	betterPrint("Bujar: All it takes is one spell, and a fine lady for my keepings.");
 	question = "Bujar: Would you want me to perform the spell to save your city?";
 	
-	if(decideYesOrNo(question)){
-	    betterPrint("-100 Happiness. -10 Population.");
+	if(askYesOrNo(question)){
+	    //betterPrint("-100 Happiness. -10 Population.");
 	    nextLine();
 	    betterPrint("Bujar: Oh No! The spell went wrong! I accidently burned down all of your crops.");
 	    betterPrint("Bujar: Well, that's all I got. Hope your find a better savor.");
 	    nextLine();
+	    betterPrint("** -100 Happiness. -20 Population. **");
+	    nextLine();
 	}
 	else{
-	    betterPrint("**A hurricane took our part of the city.**");
-	    betterPrint("-500 Happiness. -200 Population");
+	    betterPrint("-- A hurricane took our part of the city. Your castle rumbled and a rock hit you. --");
+	    betterPrint("** -500 Happiness. -200 Population. - 30 Health **");
+	    p.changeHealth(-30);
 	    nextLine();
 	    betterPrint("Bujar: Your people have died and will continue to die from no help!");
 	    nextLine();
 	}
-	return "Game Over";
+	betterPrint("Princess Bubblegum: Oh no my king. We are destroyed.");
+	nextLine();
+	return "Depression";
     }
 
     public static void main(String[] args){
