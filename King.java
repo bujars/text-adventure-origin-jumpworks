@@ -19,7 +19,11 @@ public class King implements Player{
      * @param delta the numeric change to the health of the player
      */
     public void changeHealth(int delta){
-	health+=delta;
+	if(!(delta > health))
+	{
+		health += delta;
+	}
+	return null; 
     }
 
     /**

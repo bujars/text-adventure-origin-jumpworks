@@ -24,7 +24,6 @@ public class MagicWand extends Item {
 	    return "A MagicWand helps anyone who uses it, to perform a spell that they have thought of in their mind. If the person does not have enough experience with spells, the wand will produce a spell opposite of what intended";
     }
 
-
     /**
      * Gets the count of how many instances of the item there are. 
      * For example, a pack of gum item might have 5 pieces of gum.
@@ -34,8 +33,7 @@ public class MagicWand extends Item {
     public int getCount(){
         return count;
     }
-
-
+    
     /**
      * Uses a positive number of instances of the item. 
      *
@@ -52,17 +50,17 @@ public class MagicWand extends Item {
 
     public void combine(Item sameKind) throws IllegalArgumentException{
 	if(!sameKind.getName().equals(this.getName())){
-	    throw new IllegalArgumentException("sameKind { " + 
+	    throw new IllegalArgumentException("sameKind \n{\n" + 
 					       sameKind + " }\n" +
 					       "does not have the same name " +
-					       "as this item { " + this + 
+					       "as this item \n{ " + this + 
 					       " }");
 	}
 	else if(!sameKind.getDescription().equals(this.getDescription())){
-	    throw new IllegalArgumentException("sameKind { " + 
+	    throw new IllegalArgumentException("sameKind \n{\n" + 
 					       sameKind + " }\n" +
 					       "does not have the same " +
-					       "description as this item { " + 
+					       "\ndescription as this item \n{ " + 
 					       this + " }");
 	}
 	count += sameKind.getCount();
@@ -70,6 +68,9 @@ public class MagicWand extends Item {
     }
 
     public static void main(String[] args){
-	SpellBook sb = new SpellBook();
+	MagicWand mv = new MagicWand();
+	System.out.println(mv.getName());
+	System.out.println(mv.getDescription());
+	System.out.println(mv.getCount());
     }
 }
