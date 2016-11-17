@@ -1,9 +1,9 @@
 import java.util.Scanner;
   
-public class City implements Location
+public class City extends AdvancedLocation
 {
 
-    private String toContinue = "\n**\n**[enter] TO CONTINUE\n**\n> ";
+    //private String toContinue = "\n**\n**[enter] TO CONTINUE\n**\n> ";
     
     public String getName()
     {
@@ -15,25 +15,21 @@ public class City implements Location
 	Scanner sc = new Scanner(System.in);
 	String input = "";
 	String question = "";
-	
-	//System.out.println("You Have Leveled Up to a City");
-	//Thread.sleep(1000);
 	    
-	betterPrint("You Have Leveled Up to a City!");
+	betterPrint("-- You Have Leveled Up to a City! --");
 	nextLine();
 	
 	//System.out.println("Your city has prospered!!!");
 	//Thread.sleep(1000);
 
-	betterPrint("Your city has prospered!!!");
+	betterPrint("** Your city has prospered!!! **");
 
 	//System.out.println("Gained 100 Health, 100 Money, 100 Population Growth!");
 	//Thread.sleep(1000);
 	
-	betterPrint("Gained 100 Health, 100 Money, 100 Population Growth!");
+	betterPrint("** Gained 100 Health, 100 Money, 100 Population Growth! **");
 	nextLine();
-
-
+	p.changeHealth(100);
 
 	//System.out.print(toContinue);
 	//Thread.sleep(1000);
@@ -54,12 +50,15 @@ public class City implements Location
 	Thread.sleep(1000);
 	System.out.println("Can you please lend me 10 gold to buy magic?");
 	*/
-
+	
+	betterPrint("-- Two Weeks Later --");
+	nextLine();
 	betterPrint("Princess Bubblegum: My King! Princess Stern is here!");
+	betterPrint("Princess Bubblegum: I will let them in at once!");
 	nextLine();
 	betterPrint("Princess Stern: My King, I've come from my kingdom of Oz!");
-	betterPrint("Princess Stern: Our city is falling. Birds are attacking, and witches are killing.");
-	question = ("Princess Stern: Can you please lend me 10 gold to buy magic?");
+	betterPrint("Princess Stern: Our city is falling, birds are attacking, and witches are killing.");
+	question = ("Princess Stern: Can you please lend me 10 gold and a magic wand? I will give you my spell book. ");
 
 	/*if(decideYesOrNo(p).equals("y"))
 	    {
@@ -83,16 +82,21 @@ public class City implements Location
 	*/
 
 	
-	if(decideYesOrNo(question)){
-	    betterPrint("You have provided 10 gold!\n+10 Happiness. -10 Money.");
+	if(askYesOrNo(question)){
+	    betterPrint("** You have provided 10 gold!\n+10 Happiness. -10 Money. **");
 	    nextLine();
 	    betterPrint("Princess Stern: Oh Thank You My fellow King. My Kingdom will forever owe you.");
 	    nextLine();
 	}
 	else{
-	    betterPrint("Your City has lost 50 Happiness.");
+	    betterPrint("-- Princess Stern uses a spell to make cuts in you. --");
 	    nextLine();
-	    betterPrint("Princess Stern: You coward! I hope you burn in hell, along with your city!");
+	    betterPrint("** -50 Health. ** ");
+	    p.changeHealth(-50);
+	    nextLine();
+	    betterPrint("Princess Stern: You coward! I hope you burn in hell along with your city!");
+	    nextLine();
+	    betterPrint("-- Spellbook was left behind by Princess Stern. Now in your possession --");
 	    nextLine();
 	}
 
@@ -114,6 +118,12 @@ public class City implements Location
 	nextLine();
 	betterPrint("Princess Bubblegum: Now my king, our riches have grown.\nPrincess Bubblegum: We need to spend our money to get our people to work.");
 	nextLine();
+	
+	betterPrint("-- Next Day --");
+	betterPrint("-- Peasant Miners uncovered burried gold. --");
+	betterPrint("** +100 Money in your possession. **");
+	nextLine();
+	
 	betterPrint("Princess Bubblegum: My King, My King, we have an urgent visitor.\nPrincess Bubblegum: I will let them in at once!");
 	nextLine();
 	betterPrint("Peasant: My King! I am so sorry to come out of no where.\nPeasant: My mother is sick! She needs help.");
@@ -132,16 +142,20 @@ public class City implements Location
 	    System.out.println(toContinue);
 	    sc.nextLine();
 	    }*/
-	if(decideYesOrNo(question))
+	if(askYesOrNo(question))
 	    {
-		betterPrint("+50 Happiness. -50 Money.");
+		betterPrint("** +50 Happiness. -50 Money. **");
 		betterPrint("Peasant: Thank You so much my king!\nPeasant: I don't know what I would do without my mother!\nPeasant: I hope some day I can repay you.\nPeasant: Thank You!");
 		nextLine();
 	    }
 	else
 	    {
+		betterPrint("-- Peasant has attacked you with a bat. --");
+		betterPrint("** -50 Health ** ");
+		p.changeHealth(-50);
+		nextLine();
 		betterPrint("Peasant: My mother will die!\nPeasant: One day, us peasants will rule this city.\nPeasant: You will regret turning down our requests!");
-		betterPrint("\n-70 Happiness\n");
+		betterPrint("** -70 Happiness **");
 		nextLine();
 	    }
 
@@ -149,7 +163,7 @@ public class City implements Location
 	return "PoorLevel";
     }
 
-    public boolean  decideYesOrNo(String question) throws InterruptedException{
+    /* public boolean  decideYesOrNo(String question) throws InterruptedException{
 	Scanner sc = new Scanner(System.in);
 	String input = "";
 	betterPrint(question);
@@ -185,6 +199,7 @@ public class City implements Location
 	}
 	System.out.println("");
     }
+    */
 
     public static void main(String[] args){
 	City c = new City();
