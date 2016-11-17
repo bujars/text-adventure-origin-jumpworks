@@ -10,10 +10,7 @@ public abstract class Item{
      *
      * @return the name of the item
      */
-    abstract String getName()
-    {
-	    return "Money";
-    }
+    abstract String getName();
 
     /**
      * Gets the description of the item in the text adventure game.
@@ -21,20 +18,14 @@ public abstract class Item{
      * @return the description of the item     
      */
     abstract String getDescription();
-	{
-		return "Money: If given enough, money can be used to summon...."
-	}
-
+	
     /**
      * Gets the count of how many instances of the item there are. 
      * For example, a pack of gum item might have 5 pieces of gum.
      *
      * @return the number of instances in this item
      */
-    abstract int getCount()
-    {
-	    return 1;
-    }
+    abstract int getCount();
 
 
     /**
@@ -44,14 +35,7 @@ public abstract class Item{
      * @throws IllegalArgumentException if positive num is non-positive OR
      *         exceeds the count of instances of the item
      */
-    abstract void use(int positiveNum) throws IllegalArgumentException
-    {
-	    if(postiveNum > 0 && positiveNum < getCount())
-	    {
-		    
-	    }
-    }
-
+    abstract void use(int positiveNum) throws IllegalArgumentException;
 
     /**
      * Combines two items of the same kind into one.
