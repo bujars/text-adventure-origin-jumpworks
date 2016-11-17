@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 
-public class PoorLevel extends City
+public class PoorLevel extends AdvancedLocation
 {
     public String getName()
     {
@@ -31,7 +31,7 @@ public class PoorLevel extends City
 	betterPrint("Middleclass Man: A dragon is burning us to the ground! Soon we will all be dead!");
 	question = ("Middleclass Man: Can You please lend me some object to defeat it? I know you are full of magical objects!");
 
-	if(decideYesOrNo(question)){
+	if(askYesOrNo(question)){
 	    betterPrint("You have provided a magic wand.");
 	    nextLine();
 	    betterPrint("Middleclass Man: Oh my king! Soon we shall have the dragon defeated!");
@@ -57,7 +57,7 @@ public class PoorLevel extends City
 	betterPrint("Bujar: All it takes is one spell, and a fine lady for my keepings.");
 	question = "Bujar: Would you want me to perform the spell to save your city?";
 	
-	if(decideYesOrNo(question)){
+	if(askYesOrNo(question)){
 	    betterPrint("-100 Happiness. -10 Population.");
 	    nextLine();
 	    betterPrint("Bujar: Oh No! The spell went wrong! I accidently burned down all of your crops.");

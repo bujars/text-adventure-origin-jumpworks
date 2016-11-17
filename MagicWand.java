@@ -32,7 +32,7 @@ public class MagicWand extends Item {
      * @return the number of instances in this item
      */
     public int getCount(){
-        return 1;
+        return count;
     }
 
 
@@ -44,10 +44,10 @@ public class MagicWand extends Item {
      *         exceeds the count of instances of the item
      */
     public  void use(int positiveNum) throws IllegalArgumentException{
-	if(count > 0 && positiveNum < count )
-	    {
-		count = count - positiveNum;
-	    }
+        if (positiveNum < 0){
+	    throw new IllegalArgumentException("Not a positve Number");
+	}
+	count -= positiveNum;
     }
 
     public void combine(Item sameKind) throws IllegalArgumentException{
@@ -66,10 +66,10 @@ public class MagicWand extends Item {
 					       this + " }");
 	}
 	count += sameKind.getCount();
-	sameKind.use(getCount());
+	sameKind.use(sameKind.getCount());
     }
 
     public static void main(String[] args){
-	SpellBook sb = new SpellBook;
+	SpellBook sb = new SpellBook();
     }
 }
