@@ -16,7 +16,7 @@ public class AdventureForSoftwareEngineering implements Game{
 	levels.add(new Village());
 	levels.add(new City());
 	levels.add(new PoorLevel());
-	levels.add(new Depression());
+	//levels.add(new Depression());
 	return levels;
     }
 
