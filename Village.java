@@ -69,4 +69,3 @@ public class Village extends AdvancedLocation{
 	System.out.println("Tutorial main method");
     }
 }
-}
