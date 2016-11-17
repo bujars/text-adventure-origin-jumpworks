@@ -1,4 +1,4 @@
-public class MagicWand extends Item {
+public class Money extends Item {
 
 
 
@@ -6,7 +6,7 @@ public class MagicWand extends Item {
 
 
 
-    public MagicWand(){
+    public Money(){
 
 
 	count = 1;
@@ -24,7 +24,7 @@ public class MagicWand extends Item {
 
     public String getName(){
 	
-	return "MagicWand";
+	return "Money";
 
     }
 
@@ -41,7 +41,7 @@ public class MagicWand extends Item {
 
 
 
-	return "Money is used to purchase anything desiried.";
+	return "Money is used to purchase anything desired.";
 
 
     }
