@@ -1,19 +1,14 @@
 public class Money extends Item {
 
 
-
     private int count;
 
-
-
     public Money(){
-
-
 	count = 1;
-
     }
-
-
+    public Money(int m){
+        count = m;
+    }
 
 
     /**
@@ -21,12 +16,10 @@ public class Money extends Item {
      *
      * @return the name of the item
      */
-
     public String getName(){
-	
 	return "Money";
-
     }
+
 
 
     /**
@@ -34,18 +27,9 @@ public class Money extends Item {
      *
      * @return the description of the item 
      */
-
-
-
     public String getDescription(){
-
-
-
 	return "Money is used to purchase anything you desire.";
-
-
     }
-
 
 
     /**
@@ -54,18 +38,9 @@ public class Money extends Item {
      *
      * @return the number of instances in this item
      */
-
-
     public int getCount(){
-
-
 	return count;
-
-
-
     }
-
-
 
 
     /**
@@ -75,89 +50,47 @@ public class Money extends Item {
      * @throws IllegalArgumentException if positive num is non-positive OR
      * exceeds the count of instances of the item
      */
-
     public void use(int positiveNum) throws IllegalArgumentException{
-
-
-	if(count > 0 && positiveNum < count )
-
+	if(positiveNum >= 0 && positiveNum <= count )
 	    {
-
 		count = count - positiveNum;
-
-
 	    }
     }
 
+   
+    public void combine(Item sameKind) throws IllegalArgumentException{
+	if(!sameKind.getName().equals(this.getName())){
+	    throw new IllegalArgumentException("sameKind \n{\n" + 
+					              sameKind + " }\n" +
+					              "does not have the same name " +
+					              "as this item \n{ " + this + 
+					       " }");
+	}
+	else if(!sameKind.getDescription().equals(this.getDescription())){
+	    throw new IllegalArgumentException("sameKind \n{\n" + 
+					       sameKind + " }\n" +
+					       "does not have the same " +
+					        "\ndescription as this item \n{ " + 
+					       this + " }");
+	}
+	count += sameKind.getCount();
+    }
 
     public static void main(String[] args){
-
-	Money cash = new Money();
-
-	System.out.println(cash.getName());
-	System.out.println(cash.getDescription());
-	System.out.println(cash.getCount());
-
+	Money m = new Money(100);
+	System.out.println(m.getName());
+	System.out.println(m.getDescription());
+	System.out.println(m.getCount());
+	m.use(100);
+	System.out.println(m.getCount());
+	m.combine(new Money(1000));
+	System.out.println(m.getCount());
     }
 
 
 
 
-    /*
 
-
-
-      /**
-      * Combines two items of the same kind into one.
-      * Items of the same kind have the same name and description.
-      *
-      * @param sameKindOfItem an item that has the same name and description
-      * as this item
-      * @throws IllegalArgumentException if sameKindOfItem does not have
-      * the same name as this item OR does not have the same description
-      * as this item
-      *
-
-
-public void combine(Item sameKind) throws IllegalArgumentException{
-
-
-if(!sameKind.getName().equals(this.getName())){
-throw new IllegalArgumentException("sameKind { " + 
-sameKind + " }\n" +"does not have the same name " +
-"as this item { " + this + " }");
-
-}
-
-else if(!sameKind.getDescription().equals(this.getDescription())){
-
-
-throw new IllegalArgumentException("sameKind { " + sameKind + " }\n" +
-"does not have the same " +
-"description as this item { " + this + " }");
-
-}
-
-
-// Actual combination to be implemented by subclass
-
-}
-
-
-
-
-@Override
-
-
-public String toString(){
-
-return "*Item Information*\n" +"Name:{ " + getName() + " };\n" +
-"Description:{ " + getDescription() + " };\n" +
-"Count:{ " + getCount() + " };\n";
-
-}
-
-*/
 
 
 
