@@ -41,11 +41,24 @@ public class Treasury implements Inventory
 	return null;
     }
 
+    public String toString(){
+	String allItems = "";
+	for (Item i : playerInventory){
+	    allItems += i.toString();
+	    allItems += "\n";
+	}
+	return
+	    "Treasury Information\n" +
+	    "Items:{\n\n" + allItems + "};\n";
+	    
+    }
+
     public static void main(String[] args){
 	Treasury t = new Treasury();
 	t.addItem(new SpellBook());
 	t.addItem(new MagicWand());
-	System.out.println(t.hasItem("SpellBook"));
-	System.out.println(t.getItem("SpellBook"));
+	System.out.println(t.toString());
+	//System.out.println(t.hasItem("SpellBook"));
+	//System.out.println(t.getItem("SpellBook"));
     }
 }
