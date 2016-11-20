@@ -1,6 +1,5 @@
 import java.util.Scanner;
-public class PoorLevel extends AdvancedLocation
-{
+public class PoorLevel extends HelperClass implements Location{
     public String getName()
     {
 	return "PoorLevel";

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Village extends AdvancedLocation{
+public class Village extends HelperClass implements Location{
     public String getName(){
 	return "Village";
     }
