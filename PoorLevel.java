@@ -44,36 +44,58 @@ public class PoorLevel extends HelperClass implements Location{
 		    betterPrint("Middleclass Man: Oh my king! Soon we shall have the dragon defeated!");
 		    betterPrint("Middleclass Man: The Kingdom will be saved!");
 		    nextLine();
-		    betterPrint("** +100 Happiness **");
+		    betterPrint("** +100 Health **");
+		    p.changeHealth(100);
 		    nextLine();
-
+		    betterPrint("-- A couple hours later --");
+		    nextLine();
+		    betterPrint("-- Dragon Was Defeated, but loss of -1000 Population. Wand was also returned.");
+		    nextLine();
 		}
 	    else if(!b){
 		question = "Do you want to provide a Spell Book?";
 		if(askYesOrNo(question)){
+		    b = true;
 		    betterPrint("-- You have provided a Spell Book. --");
 		    nextLine();
 		    betterPrint("Middleclass Man: Oh my king! Soon we shall have the dragon defeated!");
 		    betterPrint("Middleclass Man: The Kingdom will be saved!");
 		    nextLine();
-		    betterPrint("** +100 Happiness **");
+		    betterPrint("** +100 Health **");
+		    p.changeHealth(100);
 		    nextLine();
+                    betterPrint("-- A couple hours later --");
+                    nextLine();
+                    betterPrint("-- Dragon Was Defeated, but loss of -1000 Population. SpellBook was also returned.");
+                    nextLine();
 		}
-
-	    }
-	    else if(b == false){
-		
+		else{
 		betterPrint("-- You lied. --");
-		betterPrint("** -100 Happiness. -100 Population **");
+		betterPrint("** -100 Health. -100 Population **");
+		p.changeHealth(-100);
 		nextLine();
 		betterPrint("MiddleClass Man: You coward! I hope you burn in hell! You have ruined our kingdom!");
 		nextLine();
-	    }
+		betterPrint("-- A couple hours later --");
+		nextLine();
+		betterPrint("** -10 Population. **"); 
+		nextLine();
+		betterPrint("-- Dragon burned only 10 people then got bored a fled. --");
+		nextLine();
+		}
+	    } 
 	}
 	else{
-	    betterPrint("** -100 Happiness. -100 Population **");
+	    betterPrint("** -100 Health. -100 Population **");
+	    p.changeHealth(-100);
 	    nextLine();
 	    betterPrint("MiddleClass Man: You coward! I hope you burn in hell! You have ruined our kingdom!");
+	    nextLine();
+	    betterPrint("-- A couple hours later --");
+	    nextLine();
+	    betterPrint("** -10 Population. **");
+	    nextLine();
+	    betterPrint("-- Dragon burned only 10 people then got bored a fled. --");
 	    nextLine();
 	}
 	betterPrint("Princess Bubblegum: My king, I hope what you did was right.");
@@ -91,12 +113,13 @@ public class PoorLevel extends HelperClass implements Location{
 	    betterPrint("Bujar: Oh No! The spell went wrong! I accidently burned down all of your crops.");
 	    betterPrint("Bujar: Well, that's all I got. Hope your find a better savor.");
 	    nextLine();
-	    betterPrint("** -100 Happiness. -20 Population. **");
+	    betterPrint("** -100 Health. -20 Population. **");
+	    p.changeHealth(-100);
 	    nextLine();
 	}
 	else{
 	    betterPrint("-- A hurricane took our part of the city. Your castle rumbled and a rock hit you. --");
-	    betterPrint("** -500 Happiness. -200 Population. - 30 Health **");
+	    betterPrint("**  -200 Population. -30 Health **");
 	    p.changeHealth(-30);
 	    nextLine();
 	    betterPrint("Bujar: Your people have died and will continue to die from no help!");
