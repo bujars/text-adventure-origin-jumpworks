@@ -17,9 +17,9 @@ public class Kingdom extends AdvancedLocation
 	
 	betterPrint("--You have leveled up to Kingdom--");
 	nextLine();
-	betterPrint("Gained 1000 Health, 1000 Money, and 1000 Population!");
-	p.changeHealth(1000);
-	//p.getInventory(getItem("Money").combine(new Money(1000)));
+	betterPrint("Gained 10000 Health, 10000 Money, and 10000 Population!");
+	p.changeHealth(10000);
+	p.getInventory().getItem("Money").combine(new Money(10000));
 	nextLine();
 	betterPrint("Princess Bubblegum: My King! Congrats!");
 	betterPrint("Princess Bubblegum: Ou has never had more faith in you more than now!");
@@ -41,7 +41,7 @@ public class Kingdom extends AdvancedLocation
 		    b = true;
 		    betterPrint("-1000 Gold, +1000 Health.");
 		    p.changeHealth(1000);
-		    //p.getInventory(getItem("Money").use(-1000));
+		    p.getInventory().getItem("Money").use(1000);
 		    nextLine();
 		    betterPrint("-- An army has been created and equipted with top the line weapons. --");
 		    nextLine();
@@ -61,7 +61,7 @@ public class Kingdom extends AdvancedLocation
 		    nextLine();
 		    betterPrint("-1000 Gold, +1000 Health.");
 		    p.changeHealth(1000);
-		    //p.getInventory(getItem("Money").use(-1000));
+		    p.getInventory().getItem("Money").use(1000);
 		    nextLine();
 		    betterPrint("-- An army has been created and equipted with top the line weapons. --");
 		    nextLine();
@@ -77,7 +77,7 @@ public class Kingdom extends AdvancedLocation
 		betterPrint("-- You Decided not to give a magical object. --");
 		betterPrint("-- -100 Health. -1000 Gold --");
 		p.changeHealth(-100);
-		//p.getInventory(getItem("Money").use(-1000));
+		p.getInventory().getItem("Money").use(1000);
 		nextLine();
 		betterPrint("Peppermint Butler: My king, if we die because of magic, it's all your fault!!");
 		nextLine();
@@ -89,29 +89,14 @@ public class Kingdom extends AdvancedLocation
 	    }
 
 	}	
-	/*if(askYesOrNo(question))
-	{
-		
-		betterPrint("-1000 Gold, +1000 Health.");
-		p.changeHealth(1000);
-		p.getInventory(getItem("Money").use(-1000));
-		nextLine();
-		betterPrint("-- An army has been created and equipted with top the line weapons --");
-		nextLine();
-		betterPrint("Peppermint Butler: Oh My King! Thank You for Everything! The demons shall not win!");
-		nextLine();
-		betterPrint("-- Two Hours Later --");
-		nextLine();
-		betterPrint("Princess Bubblegum: Yes! We defeated the demon army");
-		}*/
 	else
 	{
 		
 		betterPrint("--The demons have attacked your Kingdom!--");
 		nextLine();
-		betterPrint("-1000 Gold, -1000 Health, -1000 Population.");
+		betterPrint("-1000 Gold, -600 Health, -600 Population.");
 		p.changeHealth(-1000);
-		//p.getInventory(getItem("Money").use(1000));
+		p.getInventory().getItem("Money").use(1000);
 		nextLine();
 		betterPrint("Peppermint Butler: No! We are going to die! I hate you!");
 		nextLine();
@@ -121,7 +106,6 @@ public class Kingdom extends AdvancedLocation
 	betterPrint("-- Five Hours Later --");
 	nextLine();
 	betterPrint("-- Demons came back with larger army  and they destroyed 3/4 of your Kingdom!-- ");
-
 	
 	return "PoorLevel";
 
@@ -132,12 +116,12 @@ public class Kingdom extends AdvancedLocation
 
  public static void main(String[] args){
 	Kingdom k = new Kingdom();
-	//King p = new King(100);
+	King p = new King();
 	try 
 	{
-	    k.enter(new Teacher());
+	    k.enter(p);
 	    System.out.println("Kingdom Class");
-	    
+	    System.out.println(p.getInventory().toString());
 	} 
 	catch (InterruptedException e)
 	{
