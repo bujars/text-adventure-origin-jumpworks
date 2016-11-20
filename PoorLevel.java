@@ -1,5 +1,4 @@
 import java.util.Scanner;
- 
 public class PoorLevel extends AdvancedLocation
 {
     public String getName()
@@ -82,7 +81,12 @@ public class PoorLevel extends AdvancedLocation
 		nextLine();
 		betterPrint("MiddleClass Man: You coward! I hope you burn in hell! You have ruined our kingdom!");
 		nextLine();
-	   
+	}
+	else{
+	    betterPrint("** -100 Happiness. -100 Population **");
+	    nextLine();
+	    betterPrint("MiddleClass Man: You coward! I hope you burn in hell! You have ruined our kingdom!");
+	    nextLine();
 	}
 	betterPrint("Princess Bubblegum: My king, I hope what you did was right.");
 	betterPrint("Princess Bubblegum: With our Kingdom now so poor, we can't lose everything that we have done to get here.");

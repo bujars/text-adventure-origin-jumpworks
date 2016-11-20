@@ -32,7 +32,7 @@ public abstract class AdvancedLocation implements Location{
 	        System.out.println();
 		i++;
 	    } else {
-		Thread.sleep(25);
+		Thread.sleep(15);
 		System.out.print(s.substring(i, i + 1));
 	    }
 	}

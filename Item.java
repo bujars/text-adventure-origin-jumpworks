@@ -18,8 +18,7 @@ public abstract class Item{
      * @return the description of the item     
      */
     abstract String getDescription();
-
-
+	
     /**
      * Gets the count of how many instances of the item there are. 
      * For example, a pack of gum item might have 5 pieces of gum.
@@ -37,7 +36,6 @@ public abstract class Item{
      *         exceeds the count of instances of the item
      */
     abstract void use(int positiveNum) throws IllegalArgumentException;
-
 
     /**
      * Combines two items of the same kind into one.
