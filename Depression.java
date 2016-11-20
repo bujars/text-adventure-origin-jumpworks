@@ -1,7 +1,5 @@
 import java.util.Scanner;
-public class Depression extends AdvancedLocation
-
-{
+public class Depression extends HelperClass implements Location{
   public String getName()
     {
 	return "Depression";

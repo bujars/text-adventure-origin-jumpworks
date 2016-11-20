@@ -1,7 +1,5 @@
 import java.util.Scanner;
-public class Kingdom extends AdvancedLocation
-
-{
+public class Kingdom extends HelperClass implements Location{
   public String getName()
     {
 	return "Kingdom";
