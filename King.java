@@ -5,11 +5,17 @@ public class King implements Player{
     public King(){
 	health = 0;
 	inventory = new Treasury();
+	getInventory().addItem(new Money());
+	getInventory().addItem(new Happiness());
+	getInventory().addItem(new Population());
     }
 
     public King (int h){
 	health = h;
 	inventory = new Treasury();
+	getInventory().addItem(new Money());
+	getInventory().addItem(new Happiness());
+	getInventory().addItem(new Population());
     }
 
     /**
