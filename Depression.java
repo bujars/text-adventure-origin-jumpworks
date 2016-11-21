@@ -20,15 +20,11 @@ public class Depression extends AdvancedLocation
 	Thread.sleep(1000);
 	System.out.println("Gained 100 Health, 100 Money, and 100 population growth");
 	Thread.sleep(1000);
-	System.out.println(\n**\n**[enter] TO CONTINUE \n**\n>);
-	Thread.sleep(1000);
+	System.out.println(\n**\n**[enter] TO CONTINUE \n**\n>);	Thread.sleep(1000);
 	System.out.println("Back to business.");
 	Thread.sleep(1000);
 	Thread.sleep(1000);
-	System.out.println("Your Highness, Cake has you to see you.");
-	Thread.sleep(1000);
-	System.out.println("Cake: My King to be the great kingdom of OU, we need security. \n Please protect the citzens of OU by giving me 100 gold to bulid a wall.");
-	*/
+	System.out.println("Your Highne
 	
 	betterPrint("--Your Kingdom has failed. You Kingdom is in a state of Depression!--");
 	nextLine();
