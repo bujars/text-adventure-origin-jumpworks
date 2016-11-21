@@ -9,9 +9,17 @@ public class Treasury implements Inventory
 	playerInventory = new ArrayList<Item>();
     }
 
-    public void addItem(Item i)
+    public void addItem(Item item)
     {
-	playerInventory.add(i);
+	if (hasItem(item)){
+	    for(Item i: playerInventory){
+		if ((i.getName().equals(item.getName())) && (i.getDescription().equals(item.getDescription()))){
+		    i.combine(item);
+		    return;
+		}
+	    }
+	}
+	playerInventory.add(item);
     }
     
     public boolean hasItem(String itemName)
@@ -20,7 +28,16 @@ public class Treasury implements Inventory
 	{
 	    if(playerInventory.get(i).getName().equals(itemName))
 	    {
-		return true; 
+		return true;
+	    }
+	}
+	return false;
+    }
+
+    public boolean hasItem(Item item){
+	for(Item i : playerInventory){
+	    if ((i.getName().equals(item.getName())) && (i.getDescription().equals(item.getDescription()))){
+		return true;
 	    }
 	}
 	return false;
@@ -41,11 +58,26 @@ public class Treasury implements Inventory
 	return null;
     }
 
+    public String toString(){
+	String allItems = "";
+	for (Item i : playerInventory){
+	    allItems += i.toString();
+	    allItems += "\n";
+	}
+	return
+	    "Treasury Information\n" +
+	    "Items:{\n\n" + allItems + "};\n";
+	    
+    }
+
     public static void main(String[] args){
 	Treasury t = new Treasury();
 	t.addItem(new SpellBook());
 	t.addItem(new MagicWand());
-	System.out.println(t.hasItem("SpellBook"));
-	System.out.println(t.getItem("SpellBook"));
+	t.addItem(new Money(100));
+	t.addItem(new Money(2000));
+	System.out.println(t.toString());
+	//System.out.println(t.hasItem("SpellBook"));
+	//System.out.println(t.getItem("SpellBook"));
     }
 }

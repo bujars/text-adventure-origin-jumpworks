@@ -34,11 +34,15 @@ public class AdvancedEngine implements Engine{
     @Override
 	public void goToNextState() throws InterruptedException, 
 					   IllegalStateException{
+	boolean ran = false;
 	for(Location loc : locations){
 	    if(loc.getName().equals(nextLocationName)){
 		nextLocationName = loc.enter(player);
-		return;
+		ran = true;
 	    }
+	}
+	if (ran){
+	    return;
 	}
         throw new IllegalStateException("Location '" + nextLocationName + "'" +
 					" is not defined for game.");

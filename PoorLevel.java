@@ -1,6 +1,5 @@
 import java.util.Scanner;
-public class PoorLevel extends AdvancedLocation
-{
+public class PoorLevel extends HelperClass implements Location{
     public String getName()
     {
 	return "PoorLevel";
@@ -17,6 +16,7 @@ public class PoorLevel extends AdvancedLocation
 	nextLine();
 	betterPrint("** -100 Health, -100 Money, -200 Population. **");
 	p.changeHealth(-100);
+	p.getInventory().getItem("Money").use(100);
 	nextLine();
 	betterPrint("Princess Bubblegum: My King! What have you done!");
 	nextLine();
@@ -40,41 +40,67 @@ public class PoorLevel extends AdvancedLocation
 	    if(askYesOrNo(question))
 		{
 		    betterPrint("-- You have provided a Magic Wand! --");
+		    p.getInventory().getItem("MagicWand").use(1);
 		    nextLine();
 		    b = true;
 		    betterPrint("Middleclass Man: Oh my king! Soon we shall have the dragon defeated!");
 		    betterPrint("Middleclass Man: The Kingdom will be saved!");
 		    nextLine();
-		    betterPrint("** +100 Happiness **");
+		    betterPrint("** +100 Health **");
+		    p.changeHealth(100);
 		    nextLine();
-
+		    betterPrint("-- A couple hours later --");
+		    nextLine();
+		    betterPrint("-- Dragon Was Defeated, but loss of -1000 Population. Wand was also returned.");
+		    p.getInventory().addItem(new MagicWand());
+		    nextLine();
 		}
 	    else if(!b){
 		question = "Do you want to provide a Spell Book?";
 		if(askYesOrNo(question)){
+		    b = true;
 		    betterPrint("-- You have provided a Spell Book. --");
+		    p.getInventory().getItem("SpellBook").use(1);
 		    nextLine();
 		    betterPrint("Middleclass Man: Oh my king! Soon we shall have the dragon defeated!");
 		    betterPrint("Middleclass Man: The Kingdom will be saved!");
 		    nextLine();
-		    betterPrint("** +100 Happiness **");
+		    betterPrint("** +100 Health **");
+		    p.changeHealth(100);
+		    nextLine();
+                    betterPrint("-- A couple hours later --");
+                    nextLine();
+                    betterPrint("-- Dragon Was Defeated, but loss of -1000 Population. SpellBook was also returned.");
+                    p.getInventory().addItem(new SpellBook());
 		    nextLine();
 		}
-
-	    }
-	    else if(b == false){
-		
+		else{
 		betterPrint("-- You lied. --");
-		betterPrint("** -100 Happiness. -100 Population **");
+		betterPrint("** -100 Health. -100 Population **");
+		p.changeHealth(-100);
 		nextLine();
 		betterPrint("MiddleClass Man: You coward! I hope you burn in hell! You have ruined our kingdom!");
 		nextLine();
-	    }
+		betterPrint("-- A couple hours later --");
+		nextLine();
+		betterPrint("** -10 Population. **"); 
+		nextLine();
+		betterPrint("-- Dragon burned only 10 people then got bored and fled. --");
+		nextLine();
+		}
+	    } 
 	}
 	else{
-	    betterPrint("** -100 Happiness. -100 Population **");
+	    betterPrint("** -100 Health. -100 Population **");
+	    p.changeHealth(-100);
 	    nextLine();
 	    betterPrint("MiddleClass Man: You coward! I hope you burn in hell! You have ruined our kingdom!");
+	    nextLine();
+	    betterPrint("-- A couple hours later --");
+	    nextLine();
+	    betterPrint("** -10 Population. **");
+	    nextLine();
+	    betterPrint("-- Dragon burned only 10 people then got bored and fled. --");
 	    nextLine();
 	}
 	betterPrint("Princess Bubblegum: My king, I hope what you did was right.");
@@ -92,12 +118,13 @@ public class PoorLevel extends AdvancedLocation
 	    betterPrint("Bujar: Oh No! The spell went wrong! I accidently burned down all of your crops.");
 	    betterPrint("Bujar: Well, that's all I got. Hope your find a better savor.");
 	    nextLine();
-	    betterPrint("** -100 Happiness. -20 Population. **");
+	    betterPrint("** -100 Health. -20 Population. **");
+	    p.changeHealth(-100);
 	    nextLine();
 	}
 	else{
 	    betterPrint("-- A hurricane took our part of the city. Your castle rumbled and a rock hit you. --");
-	    betterPrint("** -500 Happiness. -200 Population. - 30 Health **");
+	    betterPrint("**  -200 Population. -30 Health **");
 	    p.changeHealth(-30);
 	    nextLine();
 	    betterPrint("Bujar: Your people have died and will continue to die from no help!");
@@ -105,14 +132,19 @@ public class PoorLevel extends AdvancedLocation
 	}
 	betterPrint("Princess Bubblegum: Oh no my king. We are destroyed.");
 	nextLine();
-	return "Depression";
+	return "PoorLevel";
     }
 
     public static void main(String[] args){
 	PoorLevel p = new PoorLevel();
+	King k = new King();
+	k.getInventory().addItem(new MagicWand());
+	k.getInventory().addItem(new Money());
+	k.getInventory().addItem(new SpellBook());
 	try {
-	    p.enter(new Teacher());
+	    p.enter(k);
 	    System.out.println("PoorLevel Class");
+	    System.out.println(k.getInventory().toString());
 	} catch (InterruptedException e){
 	    System.out.println("Something Broke");
 	}
