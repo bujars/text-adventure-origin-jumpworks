@@ -12,7 +12,7 @@ public class Treasury implements Inventory
     public void addItem(Item item)
     {
 	if (hasItem(item)){
-	    for(Item i: playerInventory){
+	    for(Item i : playerInventory){
 		i.combine(item);
 	    }
 	}
@@ -71,6 +71,7 @@ public class Treasury implements Inventory
 	Treasury t = new Treasury();
 	t.addItem(new SpellBook());
 	t.addItem(new MagicWand());
+	t.addItem(new Money());
 	System.out.println(t.toString());
 	//System.out.println(t.hasItem("SpellBook"));
 	//System.out.println(t.getItem("SpellBook"));
