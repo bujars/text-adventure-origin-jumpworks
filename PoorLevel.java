@@ -16,7 +16,7 @@ public class PoorLevel extends HelperClass implements Location{
 	nextLine();
 	betterPrint("** -100 Health, -100 Money, -200 Population. **");
 	p.changeHealth(-100);
-	p.getInventory().addItem(new Money(-100));
+	p.getInventory().getItem("Money").use(100);
 	nextLine();
 	betterPrint("Princess Bubblegum: My King! What have you done!");
 	nextLine();
@@ -138,6 +138,9 @@ public class PoorLevel extends HelperClass implements Location{
     public static void main(String[] args){
 	PoorLevel p = new PoorLevel();
 	King k = new King();
+	k.getInventory().addItem(new MagicWand());
+	k.getInventory().addItem(new Money());
+	k.getInventory().addItem(new SpellBook());
 	try {
 	    p.enter(k);
 	    System.out.println("PoorLevel Class");
