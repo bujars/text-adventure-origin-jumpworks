@@ -132,7 +132,7 @@ public class PoorLevel extends HelperClass implements Location{
 	}
 	betterPrint("Princess Bubblegum: Oh no my king. We are destroyed.");
 	nextLine();
-	return "PoorLevel";
+	return "Depression";
     }
 
     public static void main(String[] args){
