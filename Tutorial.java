@@ -9,13 +9,8 @@ public class Tutorial extends HelperClass implements Location{
 	Scanner sc = new Scanner(System.in);
 	String input = "";
 	String question = "";
-	//sc.nextLine() for press enter to continue
-	//System.out.println("Princess Bubblegum: Hello new King!");
 	betterPrint("Princess Bubblegum: Hello new King!");
-	//Thread.sleep(500);
 	nextLine();
-	//System.out.println("Princess Bubblegum: Im your personal advisor Princess Bubblegum");
-	//Thread.sleep(1000);
 	betterPrint("Princess Bubblegum: I am your personal advisor, Princess Bubblegum.");
 	nextLine();
 	question = "Princess Bubblegum: Are you ready to build up a Kingdom?";
@@ -24,10 +19,8 @@ public class Tutorial extends HelperClass implements Location{
 	} else {
 	    betterPrint("Princess Bubblegum: That doesn't sound promissing.");
 	}
-	//Thread.sleep(1000);
 	nextLine();
 	betterPrint("Princess Bubblegum: Alright to rule your kingdom all you have to do is answer questions. Just say yes and no.");
-	//Thread.sleep(1500);
 	nextLine();
 	question = "Princess Bubblegum: You got that?";
 	if(askYesOrNo(question)){
@@ -35,7 +28,7 @@ public class Tutorial extends HelperClass implements Location{
 	} else {
 	    betterPrint("Princess Bubblegum: Well you're going to have to anyways.");
 	}
-	return "Village";
+	return "Tutorial";
     }
     
     public static void main(String[] args){
