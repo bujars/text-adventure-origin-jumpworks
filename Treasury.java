@@ -12,8 +12,11 @@ public class Treasury implements Inventory
     public void addItem(Item item)
     {
 	if (hasItem(item)){
-	    for(Item i : playerInventory){
-		i.combine(item);
+	    for(Item i: playerInventory){
+		if ((i.getName().equals(item.getName())) && (i.getDescription().equals(item.getDescription()))){
+		    i.combine(item);
+		    return;
+		}
 	    }
 	}
 	playerInventory.add(item);
@@ -25,7 +28,7 @@ public class Treasury implements Inventory
 	{
 	    if(playerInventory.get(i).getName().equals(itemName))
 	    {
-		return true; 
+		return true;
 	    }
 	}
 	return false;
@@ -33,7 +36,7 @@ public class Treasury implements Inventory
 
     public boolean hasItem(Item item){
 	for(Item i : playerInventory){
-	    if (i.equals(item)){
+	    if ((i.getName().equals(item.getName())) && (i.getDescription().equals(item.getDescription()))){
 		return true;
 	    }
 	}
@@ -71,7 +74,8 @@ public class Treasury implements Inventory
 	Treasury t = new Treasury();
 	t.addItem(new SpellBook());
 	t.addItem(new MagicWand());
-	t.addItem(new Money());
+	t.addItem(new Money(100));
+	t.addItem(new Money(2000));
 	System.out.println(t.toString());
 	//System.out.println(t.hasItem("SpellBook"));
 	//System.out.println(t.getItem("SpellBook"));
