@@ -158,7 +158,7 @@ public class City extends HelperClass implements Location{
 	    }
 
 
-	return "City";
+	return "Kingdom";
     }
 
 
