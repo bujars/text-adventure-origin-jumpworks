@@ -90,6 +90,9 @@ public class Depression extends HelperClass implements Location{
  public static void main(String[] args){
 	Depression d = new Depression();
 	King p = new King();
+	p.getInventory().addItem(new Money());
+	p.getInventory().addItem(new MagicWand());
+	p.getInventory().addItem(new SpellBook());
 	try {
 	    d.enter(p);
 	    System.out.println("Depression Class");
