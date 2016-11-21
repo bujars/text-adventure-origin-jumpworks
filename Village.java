@@ -76,7 +76,7 @@ public class Village extends HelperClass implements Location{
 	p.changeHealth(100);
 	p.getInventory().addItem(new Money(500));
 	nextLine();
-	return "Village";
+	return "City";
     }
     
     public static void main(String[] args){
