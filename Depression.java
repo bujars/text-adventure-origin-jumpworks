@@ -16,6 +16,7 @@ public class Depression extends HelperClass implements Location{
 	nextLine();
 	betterPrint("Lost 1000 Health, 1000 Money, and 1000 Population!");
 	p.changeHealth(-1000);
+	p.getInventory().addItem(new Money(-1000));
 	nextLine();
 	betterPrint("Princess Bubblegum: My King! What did you do to us!");
 	betterPrint("Princess Bubblegum: No one believes in your power anymore! You have destroyed much of us!");
@@ -26,15 +27,16 @@ public class Depression extends HelperClass implements Location{
 	nextLine();
 	betterPrint("Cake: My King, to be the great kingdom of OU, we need security.");
 	betterPrint("Cake: My idea is to build a wall that will provide jobs and keep the city protected!");
-	question = "Cake: Please protect the citzens of OU by giving me 1000 gold so I can bulid a wall?";
+	question = "Cake: Please protect the citzens of OU by giving me 1000 Money so I can bulid a wall?";
 	
 	if(askYesOrNo(question))
 	{
 
-		betterPrint("-1000 Gold, +1000 Health.");
+		betterPrint("-1000 Money, +1000 Health.");
 		p.changeHealth(1000);
+		p.getInventory().getItem("Money").use(1000);
 		nextLine();
-		betterPrint("**The Great Wall of OU was Built!**");
+		betterPrint("-- The Great Wall of OU was Built! --");
 		betterPrint("Cake: Oh My King! Thank You for Everything! Our Kingdom will hopefully be saved.");
 		nextLine();
 	}
@@ -43,8 +45,9 @@ public class Depression extends HelperClass implements Location{
 		
 		betterPrint("--OZ has attacked your city!--");
 		nextLine();
-		betterPrint("-1000 Gold, -1000 Health, -1000 Population.");
+		betterPrint("-1000 Money, -1000 Health, -1000 Population.");
 		p.changeHealth(-1000);
+		p.getInventory().getItem("Money").use(1000);
 		nextLine();
 		betterPrint("Cake: I told you my king! Our people are ruined!");
 		nextLine();
@@ -59,24 +62,24 @@ public class Depression extends HelperClass implements Location{
 	betterPrint("King Zues: So, you need help! Of course!");
 	betterPrint("King Zues: In order for you to get my help, I need all your riches, and objects.");
 	betterPrint("King Zues: I will perform a spell that will multiply everything and make your city prosper");
-	question = "So, do we have a deal?";
+	question = "King Zues: So, do we have a deal?";
 	
 	if(askYesOrNo(question))
 	{
 	    betterPrint("-- Magical Spell Performed --");
 	    nextLine();
-	    betterPrint("Lost All Gold. Lost All Objects. Lost All Population (Except you and Princess Bubblegum)");
+	    betterPrint("** Lost All Money. Lost All Objects. Lost All Population (Except you and Princess Bubblegum) **");
 		nextLine();
 		betterPrint("King Zues: Ha! I lied and destroyed your kingdom!");
-		betterPrint("Muhahahahha......Game Over");
+		betterPrint("-- Muhahahahha......Game Over --");
 	}
 	else{
 		betterPrint("-- Magical Spell Performed --");
 		nextLine();
-		betterPrint("Lost All Gold. Lost All Objects. Lost All Population(Except you and Princess Bubblegum)");
+		betterPrint("** Lost All Money. Lost All Objects. Lost All Population(Except you and Princess Bubblegum) **");
 		nextLine();
 		betterPrint("King Zues: Ha! Big Mistake! I performed a spell and destroyed your kingdom!");
-		betterPrint("Muhahahahha......Game Over");
+		betterPrint("-- Muhahahahha......Game Over --");
 	}
 	
 	return "Game Over";
@@ -86,9 +89,11 @@ public class Depression extends HelperClass implements Location{
     }
  public static void main(String[] args){
 	Depression d = new Depression();
+	King p = new King();
 	try {
-	    d.enter(new Teacher());
+	    d.enter(p);
 	    System.out.println("Depression Class");
+	    System.out.println(p.getInventory().toString());
 	} catch (InterruptedException e){
 	    System.out.println("Something Broke");
 	}
