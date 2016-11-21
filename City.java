@@ -1,7 +1,6 @@
 import java.util.Scanner;
   
-public class City extends AdvancedLocation
-{
+public class City extends HelperClass implements Location{
 
     //private String toContinue = "\n**\n**[enter] TO CONTINUE\n**\n> ";
     

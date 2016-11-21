@@ -9,9 +9,14 @@ public class Treasury implements Inventory
 	playerInventory = new ArrayList<Item>();
     }
 
-    public void addItem(Item i)
+    public void addItem(Item item)
     {
-	playerInventory.add(i);
+	if (hasItem(item)){
+	    for(Item i: playerInventory){
+		i.combine(item);
+	    }
+	}
+	playerInventory.add(item);
     }
     
     public boolean hasItem(String itemName)
@@ -21,6 +26,15 @@ public class Treasury implements Inventory
 	    if(playerInventory.get(i).getName().equals(itemName))
 	    {
 		return true; 
+	    }
+	}
+	return false;
+    }
+
+    public boolean hasItem(Item item){
+	for(Item i : playerInventory){
+	    if (i.equals(item)){
+		return true;
 	    }
 	}
 	return false;

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Tutorial extends AdvancedLocation{
+public class Tutorial extends HelperClass implements Location{
     public String getName(){
 	return "Tutorial";
     }

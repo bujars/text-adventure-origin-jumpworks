@@ -1,7 +1,5 @@
 import java.util.Scanner;
-public class Kingdom extends AdvancedLocation
-
-{
+public class Kingdom extends HelperClass implements Location{
   public String getName()
     {
 	return "Kingdom";
@@ -19,7 +17,7 @@ public class Kingdom extends AdvancedLocation
 	nextLine();
 	betterPrint("Gained 10000 Health, 10000 Money, and 10000 Population!");
 	p.changeHealth(10000);
-	p.getInventory().getItem("Money").combine(new Money(10000));
+	p.getInventory().getItem("Money").addItem(new Money(10000));
 	nextLine();
 	betterPrint("Princess Bubblegum: My King! Congrats!");
 	betterPrint("Princess Bubblegum: Ou has never had more faith in you more than now!");

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public abstract class AdvancedLocation implements Location{
+public  class HelperClass{
     public boolean askYesOrNo(String question) throws InterruptedException{
 	Scanner sc = new Scanner(System.in);
 	String input = "";
