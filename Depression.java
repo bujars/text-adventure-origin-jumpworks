@@ -77,6 +77,7 @@ public class Depression extends HelperClass implements Location{
 		betterPrint("-- Magical Spell Performed --");
 		nextLine();
 		betterPrint("** Lost All Money. Lost All Objects. Lost All Population(Except you and Princess Bubblegum) **");
+		//p.getInventory().getItem("Money").use(getCount());
 		nextLine();
 		betterPrint("King Zues: Ha! Big Mistake! I performed a spell and destroyed your kingdom!");
 		betterPrint("-- Muhahahahha......Game Over --");
