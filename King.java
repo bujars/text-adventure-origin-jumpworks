@@ -1,20 +1,14 @@
 public class King implements Player{
     private int health;
-    private int population;
-    private int money;
     private Treasury inventory;
     
     public King(){
-	health = 100;
-	population = 50;
-	money = 100;
+	health = 0;
 	inventory = new Treasury();
     }
 
-    public King (int h, int p, int m){
+    public King (int h){
 	health = h;
-	population = p;
-	money = m;
 	inventory = new Treasury();
     }
 
@@ -36,21 +30,6 @@ public class King implements Player{
 	health += delta; 
     }
 
-    public int getPopulation(){
-	return population;
-    }
-
-    public void changePopulation(int delta){
-	population += delta;
-    }
-
-    public int getMoney(){
-	return money;
-    }
-
-    public void changeMoney(int delta){
-	money += delta;
-    }
     /**
      * Gets the player's inventory
      *
@@ -63,7 +42,6 @@ public class King implements Player{
     public String toString(){
 	return "Player Class King\n" +
 	    "Health:{ " + health + " }\n" +
-	    "Population:{ " +  population  + " }\n" +
 	    "Inventory:{\n" + getInventory().toString() + "};\n";
     }
 
