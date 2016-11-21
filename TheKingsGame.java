@@ -15,7 +15,7 @@ public class TheKingsGame implements Game{
 
     @Override
     public Player getPlayer(){
-	return new Teacher();
+	return new King();
     }
     
     public static void main(String[] args){
