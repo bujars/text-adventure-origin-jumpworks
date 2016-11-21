@@ -4,7 +4,7 @@ public class Money extends Item {
     private int count;
 
     public Money(){
-	count = 1;
+	count = 0;
     }
     public Money(int m){
         count = m;
