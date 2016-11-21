@@ -105,12 +105,12 @@ public class Kingdom extends HelperClass implements Location{
 
     public static void main(String[] args){
 	Kingdom k = new Kingdom();
-	//King p = new King(100);
+	King p = new King();
 	try 
 	{
-	    k.enter(new King());
+	    k.enter(p);
 	    System.out.println("Kingdom Class");
-	    System.out.println(k.toString());
+	    System.out.println(p.getInventory().toString());
 	} 
 	catch (InterruptedException e)
 	{
