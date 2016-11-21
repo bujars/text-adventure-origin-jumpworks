@@ -16,6 +16,7 @@ public class PoorLevel extends HelperClass implements Location{
 	nextLine();
 	betterPrint("** -100 Health, -100 Money, -200 Population. **");
 	p.changeHealth(-100);
+	p.getInventory().addItem(new Money(-100));
 	nextLine();
 	betterPrint("Princess Bubblegum: My King! What have you done!");
 	nextLine();
@@ -39,6 +40,7 @@ public class PoorLevel extends HelperClass implements Location{
 	    if(askYesOrNo(question))
 		{
 		    betterPrint("-- You have provided a Magic Wand! --");
+		    p.getInventory().getItem("MagicWand").use(1);
 		    nextLine();
 		    b = true;
 		    betterPrint("Middleclass Man: Oh my king! Soon we shall have the dragon defeated!");
@@ -50,6 +52,7 @@ public class PoorLevel extends HelperClass implements Location{
 		    betterPrint("-- A couple hours later --");
 		    nextLine();
 		    betterPrint("-- Dragon Was Defeated, but loss of -1000 Population. Wand was also returned.");
+		    p.getInventory().addItem(new MagicWand());
 		    nextLine();
 		}
 	    else if(!b){
@@ -57,6 +60,7 @@ public class PoorLevel extends HelperClass implements Location{
 		if(askYesOrNo(question)){
 		    b = true;
 		    betterPrint("-- You have provided a Spell Book. --");
+		    p.getInventory().getItem("SpellBook").use(1);
 		    nextLine();
 		    betterPrint("Middleclass Man: Oh my king! Soon we shall have the dragon defeated!");
 		    betterPrint("Middleclass Man: The Kingdom will be saved!");
@@ -67,7 +71,8 @@ public class PoorLevel extends HelperClass implements Location{
                     betterPrint("-- A couple hours later --");
                     nextLine();
                     betterPrint("-- Dragon Was Defeated, but loss of -1000 Population. SpellBook was also returned.");
-                    nextLine();
+                    p.getInventory().addItem(new SpellBook());
+		    nextLine();
 		}
 		else{
 		betterPrint("-- You lied. --");
@@ -80,7 +85,7 @@ public class PoorLevel extends HelperClass implements Location{
 		nextLine();
 		betterPrint("** -10 Population. **"); 
 		nextLine();
-		betterPrint("-- Dragon burned only 10 people then got bored a fled. --");
+		betterPrint("-- Dragon burned only 10 people then got bored and fled. --");
 		nextLine();
 		}
 	    } 
@@ -95,7 +100,7 @@ public class PoorLevel extends HelperClass implements Location{
 	    nextLine();
 	    betterPrint("** -10 Population. **");
 	    nextLine();
-	    betterPrint("-- Dragon burned only 10 people then got bored a fled. --");
+	    betterPrint("-- Dragon burned only 10 people then got bored and fled. --");
 	    nextLine();
 	}
 	betterPrint("Princess Bubblegum: My king, I hope what you did was right.");
@@ -127,14 +132,16 @@ public class PoorLevel extends HelperClass implements Location{
 	}
 	betterPrint("Princess Bubblegum: Oh no my king. We are destroyed.");
 	nextLine();
-	return "Depression";
+	return "PoorLevel";
     }
 
     public static void main(String[] args){
 	PoorLevel p = new PoorLevel();
+	King k = new King();
 	try {
-	    p.enter(new Teacher());
+	    p.enter(k);
 	    System.out.println("PoorLevel Class");
+	    System.out.println(k.getInventory().toString());
 	} catch (InterruptedException e){
 	    System.out.println("Something Broke");
 	}
