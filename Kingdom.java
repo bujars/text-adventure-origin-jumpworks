@@ -17,7 +17,7 @@ public class Kingdom extends HelperClass implements Location{
 	nextLine();
 	betterPrint("Gained 10000 Health, 10000 Money, and 10000 Population!");
 	p.changeHealth(10000);
-	p.getInventory().getItem("Money").addItem(new Money(10000));
+	p.getInventory().addItem(new Money(10000));
 	nextLine();
 	betterPrint("Princess Bubblegum: My King! Congrats!");
 	betterPrint("Princess Bubblegum: Ou has never had more faith in you more than now!");
@@ -29,6 +29,7 @@ public class Kingdom extends HelperClass implements Location{
 	betterPrint("Peppermint Butler: My King, demons from the underworld are surfacing and coming to take over Ou!");
 	betterPrint("Peppermint Butler: But we can defeat them before they reach the kingdom.");
 	question = "Peppermint Butler: Can you please lend me 1000 gold to form an army and buy weapons? Also, can I get a magical object to use? We might need magic.";
+	
 	if(askYesOrNo(question)){
 	    question = "Do you want to provide a Magic Wand?";
 	    boolean b = false;
