@@ -9,6 +9,16 @@ public class PepperMintButler extends HelperClass implements Location{
 	Scanner sc = new Scanner(System.in);
 	String input = "";
 	String question = "";
+	int rand = rand(10);
+	if (rand == 0){
+	    if (askYesorNo("Can if you let me eat some people I will give you money")){
+		betterPrint("You'll forget about them in no time");
+		betterPrint("Money : +200");
+		betterPrint("Population : -10");
+	    } else {
+		betterPrint("Well alright then");
+	    }
+	}
 	return "next";
     }
     
