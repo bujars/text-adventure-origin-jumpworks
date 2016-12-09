@@ -12,6 +12,8 @@ public  class HelperClass{
 	    if (!(input.equals("y")||input.equals("n"))){
 		input = "";
 		System.out.println("That isn't an option try again");
+		Thread.sleep(15);
+		return askYesOrNo(question);
 	    }
         }
 	return input.equals("y");
@@ -37,5 +39,20 @@ public  class HelperClass{
 	    }
 	}
 	System.out.println("");
+    }
+
+    public static void main(String[] args){
+	HelperClass helper = new HelperClass();
+	try{
+	    if(helper.askYesOrNo("Are you happy?")){
+		helper.betterPrint("Great");
+	    } else {
+		helper.betterPrint("But why?");
+	    }
+	    helper.nextLine();
+	    helper.betterPrint("Today is such a great day!");
+	} catch (InterruptedException e){
+	    System.out.println("Something broke");
+	}
     }
 }
