@@ -41,6 +41,10 @@ public  class HelperClass{
 	System.out.println("");
     }
 
+    public int rand(int amount){
+	return (int) (Math.random() * amount);
+    }
+
     public int rand(int start, int amount){
 	return (int) (Math.random() * amount) + start;
     }
