@@ -41,9 +41,17 @@ public  class HelperClass{
 	System.out.println("");
     }
 
+    public int rand(int start, int amount){
+	return (int) (Math.random() * amount) + start;
+    }
+
     public static void main(String[] args){
 	HelperClass helper = new HelperClass();
 	try{
+	    for (int i = 0; i < 1000; i++){
+		System.out.println(helper.rand(1, 50));
+	    }
+	    helper.nextLine();
 	    if(helper.askYesOrNo("Are you happy?")){
 		helper.betterPrint("Great");
 	    } else {
