@@ -35,11 +35,9 @@ public class AdvancedEngine implements Engine{
 	public void goToNextState() throws InterruptedException, 
 					   IllegalStateException{
 	boolean ran = false;
-	for(Location loc : locations){
-	    if(loc.getName().equals(nextLocationName)){
-		nextLocationName = loc.enter(player);
-		ran = true;
-	    }
+	if (nextLocationName == "next"){
+	    nestLocationNaem = locations.get(rand(0, locations.length()));
+	    ran = true;
 	}
 	if (ran){
 	    return;

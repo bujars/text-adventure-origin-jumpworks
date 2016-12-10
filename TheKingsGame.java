@@ -5,11 +5,6 @@ public class TheKingsGame implements Game{
     public List<Location> getLocations(){
 	List<Location> levels = new ArrayList<Location>();
         levels.add(new Tutorial());
-	levels.add(new Village());
-	levels.add(new City());
-	levels.add(new Kingdom());
-	levels.add(new PoorLevel());
-	levels.add(new Depression());
 	return levels;
     }
 

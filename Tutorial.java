@@ -28,7 +28,7 @@ public class Tutorial extends HelperClass implements Location{
 	} else {
 	    betterPrint("Princess Bubblegum: Well you're going to have to anyways.");
 	}
-	return "Village";
+	return "next";
     }
     
     public static void main(String[] args){
